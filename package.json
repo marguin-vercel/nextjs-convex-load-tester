@@ -1,0 +1,43 @@
+{
+  "name": "my-convex-app",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "npm-run-all --parallel dev:frontend dev:backend",
+    "dev:frontend": "next dev",
+    "dev:backend": "convex dev",
+    "predev": "convex dev --until-success && convex dev --once --run-sh \"node setup.mjs --once\" && convex dashboard",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint . --ignore-pattern \"convex/_generated/**\"",
+    "load-test": "node load-test.mjs",
+    "load-test:light": "node load-test.mjs 50 5 5",
+    "load-test:medium": "node load-test.mjs 500 20 10",
+    "load-test:heavy": "node load-test.mjs 2000 50 25",
+    "load-test:advanced": "node load-test-advanced.mjs",
+    "load-test:small": "node load-test-advanced.mjs small 1000 50",
+    "load-test:large": "node load-test-advanced.mjs large 500 20",
+    "load-test:mixed": "node load-test-advanced.mjs mixed 1000 25"
+  },
+  "dependencies": {
+    "@convex-dev/auth": "^0.0.90",
+    "convex": "^1.29.1",
+    "next": "16.0.1",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "devDependencies": {
+    "@convex-dev/eslint-plugin": "^1.0.0",
+    "@tailwindcss/postcss": "^4",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "dotenv": "^17.2.3",
+    "eslint": "^9",
+    "eslint-config-next": "16.0.1",
+    "npm-run-all2": "^5.0.0",
+    "prettier": "^3.5.3",
+    "tailwindcss": "^4",
+    "typescript": "^5"
+  }
+}
