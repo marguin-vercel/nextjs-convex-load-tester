@@ -84,6 +84,14 @@ export default function SignIn() {
               Password must be at least 8 characters
             </p>
           )}
+          {flow === "signIn" && (
+            <a
+              href="/forgot-password"
+              className="text-xs text-slate-600 dark:text-slate-400 hover:text-slate-800 dark:hover:text-slate-200 underline px-1 mt-1 transition-colors"
+            >
+              Forgot password?
+            </a>
+          )}
         </div>
         <button
           className="bg-slate-700 hover:bg-slate-800 dark:bg-slate-600 dark:hover:bg-slate-500 text-white font-semibold rounded-lg py-3 shadow-md hover:shadow-lg transition-all duration-200 hover:scale-[1.02] active:scale-[0.98] cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100"

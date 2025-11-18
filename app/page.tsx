@@ -141,6 +141,23 @@ function Content() {
 
       <div className="flex flex-col gap-4">
         <h2 className="font-semibold text-xl text-slate-800 dark:text-slate-200">
+          Load Testing
+        </h2>
+        <p className="text-slate-600 dark:text-slate-400 text-sm">
+          Test the performance of your Convex backend with the built-in load testing tool.
+        </p>
+        <Link
+          href="/load-test"
+          className="bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 text-white text-sm font-medium px-6 py-3 rounded-lg cursor-pointer transition-all duration-200 shadow-md hover:shadow-lg hover:scale-[1.02] active:scale-[0.98] text-center"
+        >
+          Open Load Testing Dashboard →
+        </Link>
+      </div>
+
+      <div className="h-px bg-slate-200 dark:bg-slate-700"></div>
+
+      <div className="flex flex-col gap-4">
+        <h2 className="font-semibold text-xl text-slate-800 dark:text-slate-200">
           Making changes
         </h2>
         <p className="text-slate-600 dark:text-slate-400 text-sm">

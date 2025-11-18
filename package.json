@@ -17,10 +17,15 @@
     "load-test:advanced": "node load-test-advanced.mjs",
     "load-test:small": "node load-test-advanced.mjs small 1000 50",
     "load-test:large": "node load-test-advanced.mjs large 500 20",
-    "load-test:mixed": "node load-test-advanced.mjs mixed 1000 25"
+    "load-test:mixed": "node load-test-advanced.mjs mixed 1000 25",
+    "load-test:pooling": "node load-test-pooling.mjs",
+    "load-test:pooling:small": "node load-test-pooling.mjs small 100 10",
+    "load-test:pooling:medium": "node load-test-pooling.mjs medium 500 20",
+    "load-test:pooling:large": "node load-test-pooling.mjs large 500 20"
   },
   "dependencies": {
     "@convex-dev/auth": "^0.0.90",
+    "bcryptjs": "^3.0.3",
     "convex": "^1.29.1",
     "next": "16.0.1",
     "react": "^19.0.0",
@@ -29,6 +34,7 @@
   "devDependencies": {
     "@convex-dev/eslint-plugin": "^1.0.0",
     "@tailwindcss/postcss": "^4",
+    "@types/bcryptjs": "^3.0.0",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
@@ -39,5 +45,6 @@
     "prettier": "^3.5.3",
     "tailwindcss": "^4",
     "typescript": "^5"
-  }
+  },
+  "packageManager": "pnpm@10.15.0+sha512.486ebc259d3e999a4e8691ce03b5cac4a71cbeca39372a9b762cb500cfdf0873e2cb16abe3d951b1ee2cf012503f027b98b6584e4df22524e0c7450d9ec7aa7b"
 }

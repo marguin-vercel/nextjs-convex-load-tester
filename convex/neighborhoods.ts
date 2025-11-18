@@ -75,10 +75,6 @@ export const getNeighborhoodByName = query({
   },
 });
 
-// Query to count total neighborhoods
-export const countNeighborhoods = query({
-  handler: async (ctx) => {
-    const neighborhoods = await ctx.db.query("neighborhoods").collect();
-    return neighborhoods.length;
-  },
-});
+// Note: countNeighborhoods removed due to memory constraints with large datasets
+// With 5,070+ neighborhoods containing GeoJSON data, counting exceeds 64 MB memory limit
+// For verification, use listNeighborhoods with a small limit instead

@@ -52,10 +52,6 @@ async function importData() {
 
   console.log(`✅ Successfully imported ${imported} neighborhoods!`);
 
-  // Verify the import
-  const count = await client.query(api.neighborhoods.countNeighborhoods);
-  console.log(`✅ Total neighborhoods in database: ${count}`);
-
   // Show first 10 neighborhoods as a sample
   const sample = await client.query(api.neighborhoods.listNeighborhoods, {
     limit: 10,
